@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+{% load static %}
+{% load my_tags %}
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Резюме | Хайруллин Р.Г.</title>
+	<link rel="stylesheet" href="{% static 'assets/css/font-awesome.min.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/animate.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/query.mCustomScrollbar.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/owl.carousel.min.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/normalize.css' %}">
+	<link rel="stylesheet" href="{% static 'style.css' %}">
+	<link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}">
+	<script src="{% static 'assets/js/jquery-1.12.4.min.js' %}"></script>
+    <script>$(document).ready(function(){
+  $().owlCarousel({
+      loop: true,
+      autoplay: true,
+      autoplayTimeout: 4000,
+  });
+});</script>
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+	<!--Start Hero Area-->
+    <div id="home" class="hero-area">
+        <div class="hero-bg bg-1">
+            <div class="d-table hero-area-wrapper">
+                <div class="d-table-cell hero-area-inner">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-9">
+                                <h1>backend developer <br>
+                                    <small class="hero-area">Хайруллин Раиль Гайсович</small>
+                                </h1>
+                                <a href="#skill" class="btn hero-btn shadow scrl-down">Узнать больше</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Start Main Menu Logo-->
+    <div class="menubar-area">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg">
+                <a class="navbar-a" href="#" data-tooltip="Нажмите, чтобы скачать резюме">Хайруллин Раиль</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="scrl-down nav-link" href="#skill">навыки</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="scrl-down nav-link" href="#about">Обо_мне</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="scrl-down nav-link" href="#resume-education">Образование</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="scrl-down nav-link" href="#work-exp">Опыт</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="scrl-down nav-link" href="#testimonial">Сертификаты</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="scrl-down nav-link" href="#portfolio">Портфолио</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="scrl-down nav-link" href="#resume">Резюме</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="scrl-down nav-link" href="#contact">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+{#	<!--Start Target-->#}
+{#    <div class="target-area">#}
+{#        <div class="container">#}
+{#            <div class="about-title">#}
+{#                <h1>Хобби/увлечения</h1>#}
+{#                <hr>#}
+{#            </div>#}
+{#            <div class="row">#}
+{#                {% for item in my_hobby %}#}
+{#                    <div class="col-lg-4">#}
+{#                        <div class="single-target-box">#}
+{#                            <h1>{{ item.name }}</h1>#}
+{#                            {{ item.description }}#}
+{#                        </div>#}
+{#                    </div>#}
+{#                {% endfor %}#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+
+	<!--Start About Area-->
+	<div id="skill" class="about-area">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-5 no-padding">
+					<div class="about-img">
+						<img src="{% static 'assets/img/about-bg.jpg' %}" alt="" class="img-fluid">
+					</div>
+				</div>
+				<div class="col-lg-7">
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="about-title">
+								<h1>Навыки</h1>
+                                <hr>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+                        {% for skill in my_skills %}
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="single-about-box">
+                                        <i class="{{ skill.icon }}"></i>
+                                        <h2>{{ skill.name }}</h2>
+                                        <p>{{ skill.description }}</p>
+                                    </div>
+                                </div>
+                        {% endfor %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--Start Skill-->
+	<div id="about" class="skill-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="skillbar">
+						<h1>Обо мне</h1>
+						<p>Спокойный, уравновешенный, веду здоровый образ жизни, предпочитаю активный отдых на свежем воздухе. Хочу работать над разнообразными проектами, включая повышенной сложности. Привык преодолевать сложности и доводить дело до конца.</p>
+						<a href="#contact" class="btn skill-btn">напишите мне</a>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="skill-progress">
+                        {% for item in my_personal_qualities %}
+                            {% if item.good_or_bad %}
+                                <i class="fa fa-check-square-o"></i>
+                                <p title="{{ item.description }}">&nbsp;{{ item.name }}</p>
+                            {% else %}
+                                <i class="fa fa-minus-square-o"></i>
+                                <p title="{{ item.description }}">&nbsp;{{ item.name }}</p>
+                            {% endif %}
+                        {% endfor %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+    <!--Start Resume-Education-->
+	<div id="resume-education" class="resume-education">
+		<div class="container bottom-border">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="edu">
+                        <h1>Образование</h1>
+                        <ul><strong>Грамоты/сертификаты</strong>
+                            {% for item in my_certifications_education %}
+                                <li><a href="#my_certifications{{ item.id }}" class="edu"
+                                       data-toggle="modal">{{ item.name }}</a></li>
+                            {% endfor %}
+                        </ul>
+                        {% for item in my_certifications_education %}
+                            <div id="my_certifications{{ item.id }}" class="modal">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            {{ item.name }}
+                                        </div>
+                                        <div class="modal-body">
+                                            <img src="{{ item.image.url }}" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="edu-detail-box">
+                        {% for item in my_education  %}
+                        <div class="single-edu">
+							<h3>{{ item.name }}</h3>
+							<p class="edu-date">{{ item.date_for }} - {{ item.date_to }}</p>
+						</div>
+                        {% endfor %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="work-exp" class="resume-education work-exp">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="edu">
+						<h1>Опыт</h1>
+						<p>Есть небольшой опыт работы <strong>backend-разработчиком</strong>.</p>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="edu-detail-box">
+                        {% for item in my_work %}
+						<div class="single-edu">
+							<h3>{{ item.position }}</h3>
+							<p class="edu-date"><span>{{ item.organisation }}</span>
+                                / {{ item.date_for }} - {{ item.date_to }}</p>
+						</div>
+                        {% endfor %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!--Start Testimonial-->
+	<div id="testimonial" class="testimonial-area">
+    <div class="container">
+    <div class="row">
+    <div class="col-lg-6">
+    <h1>Сертификаты</h1>
+    </div>
+    </div>
+    </div>
+		<div class="owl-carousel owl-theme testimonial-slider">
+            {% for item in my_certifications %}
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-lg-10 text-center border">
+						<a href="{{ item.url }}" target="_blank">{{ item.name}}</a>
+						<h5>{{ item.date}}</h5>
+					</div>
+				</div>
+			</div>
+            {% endfor %}
+		</div>
+
+	</div>
+	<!--End of testimonial-->
+
+
+	<!--Start Portfolio-->
+	<div id="portfolio" class="portfolio-area">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-10 text-center">
+					<div class="protfolio-title">
+						<h1>Портфолио</h1>
+						<p>Здесь Вы можете посмотреть работы, выполненные мною в ходе обучения языку программирования <strong>Python</strong> и фреймворку <strong>Django</strong>.</p>
+					</div>
+				</div>
+			</div>
+			<div class="portfolio-container">
+				<div class="portfolio-content portfolio-filter {% for category in projects_category %} {{ category.slug }}{% endfor %}">
+					<div class="portfolio-menu">
+						<h3>Фильтр по категориям</h3>
+						<ul>
+							<li data-filter="*">Все</li>
+                            {% for category in projects_category %}
+                                <li data-filter=".{{ category.slug }}">{{ category.name }}</li>
+                            {% endfor %}
+						</ul>
+					</div>
+				</div>
+            {% for project in my_projects %}
+            <div class="portfolio-content portfolio-items {{ project.category.slug }} icon">
+					<div class="portfolio-bg-items">
+						<div class="portfolio-bg protfolio-bg-1">
+							<a href="{{ project.url }}" target="_blank"><img class="portfolio" src="{{ project.image.url }}" alt=""><i class="fa fa-search"></i></a>
+						</div>
+					</div>
+				</div>
+            {% endfor %}
+			</div>
+		</div>
+	</div>
+
+    <!--Start Resume-->
+	<div id="resume" class="resume-area">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-10 text-center">
+					<h1>Резюме</h1>
+					<p>Вы можете сохранить актуальную информацию обо мне, нажав на кнопку ниже.</p>
+					<a href="https://drive.google.com/file/d/1Cc3g_Xo_0YgiGFHwK3odr5Zk1PYxg84u/view?usp=sharing" class="btn cmn-btn resume-btn" target="_blank">Скачать резюме</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--Start Contact-->
+	<div id="contact" class="contact-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="contact-left">
+						<div class="contact-details">
+							<h1>Контакты</h1>
+							<p>Вы можете связаться со мной по указанным ниже данным, или заполнив форму.</p>
+						</div>
+                        {% for info in my_info %}
+
+
+
+{#						<div class="contact-address">#}
+{#                        <p>#}
+{#                            {% for address in info.address|split:", " %}#}
+{#							{{ address }}<br>#}
+{#                            {% endfor %}#}
+{#                        </p>#}
+{#						</div>#}
+						<div class="contact-mail">
+							<p><span>Email:</span><a href="mailto:{{ info.email }}">{{ info.email }}</a></p>
+							<p><span>Phone:</span><a href="tel:{{ info.phone }}">{{ info.phone }}</a></p>
+						</div>
+                        {% endfor %}
+					</div>
+				</div>
+				<div class="col-lg-6">
+                    <div class="contact-form">
+                        {% if success %}
+                            <div class="form-group">
+                                <div class="alert alert-warning" role="alert" id="contact-message">
+                                    Сообщение получено, я отвечу Вам, как будет возможность.
+                                </div>
+                            </div>
+                        {% endif %}
+						<form action="#contact" method="post">
+                            {% csrf_token %}
+
+
+							<div class="form-group">
+								<label for="name">Имя <span>*</span></label>
+								{{ form.name }}
+							</div>
+							<div class="form-group">
+								<label for="email">Email <span>*</span></label>
+								{{ form.email }}
+							</div>
+							<div class="form-group">
+								<label for="message">Сообщение <span>*</span></label>
+								{{ form.message }}
+							</div>
+							<button type="submit" class="btn submit-btn">Написать мне</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="footer-area">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-8 text-center">
+					<div class="footer-social-links">
+                        {% for social in social_network %}
+						<a href="{{ social.url }}"><i class="{{ social.icon }}"></i></a>
+                        {% endfor %}
+					</div>
+                    <br>
+                    <p class="copyright">
+                        Copyright 2021
+                    </p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="{% static 'assets/js/popper.min.js' %}"></script>
+	<script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
+	<script src="{% static 'assets/js/isotope.pkgd-3.0.4.min.js' %}"></script>
+	<script src="{% static 'assets/js/masonry.pkgd.min-4.2.0.js' %}"></script>
+	<!--	<script src="./assets/js/jquery.mCustomScrollbar.concat.min.js"></script>-->
+	<script src="{% static 'assets/js/main.js' %}"></script>
+</body>
+
+</html>
