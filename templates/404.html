@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Резюме | Хайруллин Р.Г.</title>
+    <link rel="stylesheet" href="{% static 'assets/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/query.mCustomScrollbar.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:400,100,300'>
+    <link rel="stylesheet" href="{% static 'assets/css/style_404.css' %}">
+    <script src="{% static 'assets/js/jquery-1.12.4.min.js' %}"></script>
+    <script>$(document).ready(function () {
+        $().owlCarousel({
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 4000,
+        });
+    });</script>
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+<!--Start Main Menu Logo-->
+<div class="menubar-area">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-a"
+               href="https://drive.google.com/file/d/1OfsRTcnEf4AS5q3G0BJVqljOlMLZ98wB/view?usp=sharing" target="_blank"
+               data-tooltip="Нажмите, чтобы скачать резюме">Хайруллин Раиль</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'home' %}#skill">навыки</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'home' %}#about">Обо_мне</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'home' %}#resume-education">Образование</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'home' %}#work-exp">Опыт</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'home' %}#testimonial">Сертификаты</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'home' %}#portfolio">Портфолио</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'home' %}#resume">Резюме</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'home' %}#contact">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</div>
+
+<!--Start Error 404-->
+<div class="cont_principal">
+    <div class="cont_error">
+
+        <h1>Oops...</h1>
+        <p>Запрошенной страницы не существует (Error 404).</p>
+        <p><a href="{% url 'home' %}" class="btn error-btn">вернуться на главную</a></p>
+    </div>
+    <div class="cont_aura_1"></div>
+    <div class="cont_aura_2"></div>
+</div>
+
+<script src="{% static 'assets/js/popper.min.js' %}"></script>
+<script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
+<script src="{% static 'assets/js/isotope.pkgd-3.0.4.min.js' %}"></script>
+<script src="{% static 'assets/js/masonry.pkgd.min-4.2.0.js' %}"></script>
+<script src="{% static 'assets/js/main.js' %}"></script>
+<script src="{% static 'assets/js/script_404.js' %}"></script>
+</body>
+
+</html>
+
+
+

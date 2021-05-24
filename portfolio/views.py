@@ -18,7 +18,6 @@ def my_site(request):
         'my_certifications_education': Certifications.objects.filter(is_education=True),
         'my_certifications': Certifications.objects.filter(is_education=False),
         'my_projects': Projects.objects.all(),
-        'my_social_network': MyHobby.objects.all(),
         'projects_category': ProjectsCategory.objects.all(),
         'social_network': SocialNetwork.objects.all()
     }

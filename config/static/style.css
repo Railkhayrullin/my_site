@@ -65,7 +65,7 @@ h6 {
 /*Hero Area*/
 
 .hero-area .bg-1 {
-	background: url(./assets/img/hero-bg.jpg);
+	background: url(assets/img/hero-bg.jpg);
 	background-size: cover;
 	background-attachment: fixed;
 }
@@ -815,7 +815,7 @@ p.edu-summury {
 
 .footer-area {
 	background: #191f21;
-	padding: 60px 0;
+	padding: 20px 0 0;
 }
 
 .copyright {
@@ -824,8 +824,16 @@ p.edu-summury {
 	font-size: 14px;
 }
 
-p.copyright a {
+.footer-area p {
+	margin-top: 20px;
+}
+
+.footer-area p.copyright a {
+	all:initial;
 	color: #fcfbfb;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding-top: 0;
 }
 
 p.copyright a:hover {
@@ -843,6 +851,8 @@ p.copyright a:hover {
 	border-radius: 50%;
 	font-size: 25px;
 	margin-right: 10px;
+	margin-bottom: 0;
+	padding-bottom: 0;
 }
 
 .footer-social-links a i {

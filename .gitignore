@@ -4,6 +4,5 @@
 .idea
 media
 db.sqlite3
-my_site/local_settings.py
 venv
 env
