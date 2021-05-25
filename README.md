@@ -5,7 +5,7 @@
 </p>
 
 # Проект my_site
-Личный сайт-резюме. На данный момент загружен на сервер и доступен по адресу <a href="https://khay.ru" target="_blank">khay.ru</a>. Основан на стеках:
+Личный сайт-резюме. Проект загружен на виртуальную машину на <strong>Mail.Ru Cloud Solutions</strong> и доступен по адресу <a href="https://khay.ru" target="_blank">khay.ru</a>.<br>Проект основан на стеках:
 - Python
 - Django
 - Gunicorn
